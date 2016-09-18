@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-function searchGit(){
-  return axios.get('https://api.github.com/users/2183713z')
+function searchGit(add){
+  let address=`https://api.github.com/users/${add}`
+  return axios.get(address)
     .then((res) => (
     { data:res.data }
   ))

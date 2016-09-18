@@ -6,11 +6,22 @@ class About extends React.Component {
     super();
     this.state={
       data:{},
-      wait:true
+      wait:true,
+      inputValue:'username'
     }
   }
   componentDidMount(){
-    searchGit()
+
+  }
+  handleInput(e){
+    let value=e.target.value;
+    this.setState({
+      inputValue:value
+    })
+  }
+  handleClick(){
+    let name=this.state.inputValue;
+    searchGit(name)
       .then( (data) => {
         console.log(data);
         this.setState({
@@ -21,6 +32,14 @@ class About extends React.Component {
       })
   }
   render () {
+    let styles={
+      root:{
+        maxWidth:'700px',
+        margin:'0 auto',
+        border:'1px solid teal',
+        textAlign:'center'
+      }
+    }
     let gitInfo=(
       <div>
         <h3>{this.state.data.name}</h3>
@@ -28,7 +47,9 @@ class About extends React.Component {
       </div>
     )
     return(
-      <div>
+      <div style={styles.root}>
+        <input type='text' value={this.state.inputValue} onChange={this.handleInput.bind(this)}/>
+        <button onClick={this.handleClick.bind(this)}>搜索</button><br/>
         {  this.state.wait ? '正在获取数据' : gitInfo }
       </div>
     )
