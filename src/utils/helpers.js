@@ -11,8 +11,9 @@ function searchGit(add){
     });
 }
 export {searchGit};
+
 function getJson(){
-  let address=`https://raw.githubusercontent.com/2183713z/9-18-aftern/master/card.json`
+  let address=`https://raw.githubusercontent.com/2183713z/9-18-aftern/master/card.json?${Math.random()}`
   return axios.get(address)
     .then( (res) =>(
       {getJson:res.data}
