@@ -39,7 +39,7 @@ class Blog extends React.Component {
           this.props.params.title=='e' ? '我是E页面' : '您访问的页面没有内容'
         }*/}
 
-        <div dangerouslySetInnerHTML={{__html:content}} />
+        <div dangerouslySetInnerHTML={{__html:content}} className='post-content'/>
       </div>
     )
   }
