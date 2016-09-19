@@ -22,13 +22,12 @@ class About extends React.Component {
   handleClick(){
     let name=this.state.inputValue;
     searchGit(name)
-      .then( (data) => {
-        console.log(data);
+      .then( (recData) => {
+        console.log(recData);
         this.setState({
-          data:data.data,
+          data:recData.getData,
           wait:false
         })
-        console.log(this.state.data);
       })
   }
   render () {
