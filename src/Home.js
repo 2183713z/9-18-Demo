@@ -54,7 +54,7 @@ class Home extends React.Component {
         </div>
         <p style={styles.p}>我叫孔令敬，一名大四的学生，所学专业是计算机科学与技术。我的理念是：在年轻的季节我甘愿吃苦受累，
         希望通过自己富有激情、积极主动的努力实现自身价值并在工作中做出最大的贡作为初学。本人热爱学习，工作态度严谨认真，责任心强
-        ,有很好的团队合作能力。小小的心中怀揣一份美好的梦想，只希望能给我一个释放、展示自己的平台。我是一个爱
+        ,有很好的团队合作能力。小小的心中怀揣一份美好的梦想，只希望能给我一个释放、展示自己的平台。
         </p>
         <p><a className="btn btn-primary btn-lg" role="button" onClick={this.handleClick.bind(this)}>我的工作</a></p>
         <h2 style={styles.h2}>谢谢</h2>
